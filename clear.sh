@@ -1,0 +1,12 @@
+rm -rf tmp/wkhtml*
+rm -rf tmp/xls*
+rm -rf tmp/*.log
+rm -rf tmp/*/*.log
+rm -rf /www/server/*.log
+rm -rf /www/server/*/*.log
+rm -rf /var/*/*.log
+rm -rf /var/*/*/*.log
+rm -rf /root/*.log
+rm -rf /root/*/*.log
+rm -rf /home/*.log
+rm -rf /home/*/*.log
