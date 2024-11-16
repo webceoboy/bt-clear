@@ -1,12 +1,9 @@
 rm -rf tmp/wkhtml*
 rm -rf tmp/xls*
-rm -rf tmp/*.log
-rm -rf tmp/*/*.log
-rm -rf /www/server/*.log
-rm -rf /www/server/*/*.log
-rm -rf /var/*/*.log
-rm -rf /var/*/*/*.log
-rm -rf /root/*.log
-rm -rf /root/*/*.log
-rm -rf /home/*.log
-rm -rf /home/*/*.log
+find /www/ -type f -name "*.log" -exec rm -f {} +
+find /tmp/ -type f -name "*.log" -exec rm -f {} +
+find /home/ -type f -name "*.log" -exec rm -f {} +
+sudo journalctl --vacuum-time=7d
+sudo apt-get clean
+
+
